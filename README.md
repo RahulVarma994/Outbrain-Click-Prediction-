@@ -20,6 +20,7 @@ ad_aucc['aucc'] = (ad_aucc['sum'] + 12*Mean) / (12 + ad_aucc['count'])
 
 
 test = test.merge(ad_likelihood, how='left')
+
 finaloutput = test.groupby('display_id').ad_id.apply(lambda x: " ".join(map(str,x))).reset_index()
 
 finaloutput.to_csv('------------path/finaloutput',index = False )
