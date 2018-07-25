@@ -9,6 +9,7 @@ test = pd.read_csv('/media/FE5C77A55C77577D/outbrain/all/clicks_test.csv')
 
 
 ad_aucc = train.groupby('ad_id').clicked.agg(['count','sum','mean']).reset_index()
+
 Mean = train.clicked.mean()
 
 ad_aucc['aucc'] = (ad_aucc['sum'] + 12*Mean) / (12 + ad_aucc['count'])
