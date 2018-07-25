@@ -2,8 +2,11 @@
 
 
 import pandas as pd
+
 import numpy as np
+
 #importing data set
+
 train = pd.read_csv('/media/FE5C77A55C77577D/outbrain/all/clicks_train.csv',usecols = ['ad_id','clicked'])
 
 test = pd.read_csv('/media/FE5C77A55C77577D/outbrain/all/clicks_test.csv')
